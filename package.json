@@ -1,0 +1,22 @@
+{
+  "name": "counterjs",
+  "version": "0.1.0",
+  "description": "CounterJS - Lightweight JavaScript plugin for enabling timers on page",
+  "main": "src/counter.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmjbyrne/counterjs.git"
+  },
+  "author": "Keith Michael Byrne <keithmbyrne@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kmjbyrne/counterjs/issues"
+  },
+  "homepage": "https://github.com/kmjbyrne/counterjs#readme",
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  }
+}

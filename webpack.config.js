@@ -5,15 +5,15 @@ var webpack = require('webpack');
 module.exports = function makeWebpackConfig() {
     var config = {};
     config.entry = {
-      app: './src/counter.js'
+      counter: './src/counter.js'
     };
     config.output = {
-      path: __dirname + 'dist',
-      publicPath: 'http://localhost:3000/',
-      filename: '[name].min.js',
+      path: __dirname,
+      publicPath: 'http://localhost:4000/',
+      filename: './dist/[name].min.js',
       chunkFilename: '[name].min.js'
     };
-    config.devtool = "source-map";
+    config.devtool = "inline-source-map";
     config.module = {
       rules: [{
         test: /\.js$/,

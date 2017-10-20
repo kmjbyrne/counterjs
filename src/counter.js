@@ -1,36 +1,45 @@
 class CounterJS {
     constructor(element=undefined, config=undefined) {
-        if (!(element instanceof Node)) {
-            try {
-                element = document.querySelector(element);
-            }
-            catch (Exception) {
-                throw ("Can't initialize CounterJS because " + element + " is not a Node.");
-            }
-        }
         this.timer = 10;
         this.config = Object.assign(this.getDefaults(), config)
-        this.config.rate = 1000;
         this.element = element;
         this.init();
     }
-    init() {
-        this.startCountdown(this.element);
+    verifyElement() {
+        if (!(this.element instanceof Node)) {
+            try {
+                this.element = document.querySelector(this.element);
+            }
+            catch (Exception) {
+                throw ("Can't initialize CounterJS because " + this.element + " is not a Node.");
+            }
+        }
     }
-    updateClock(n, t) {
-        n.innerHTML = t--;
-        let rate = n.dataset.counterRate || this.config.rate;
+    init() {
+        this.verifyElement();
+        this.startCountdown();
+    }
+    updateClock(t) {
+        this.element.innerHTML = t--;
+        let rate = this.element.dataset.counterRate || this.config.rate;
         if (t >= 0) {
-            setTimeout(() => { this.updateClock(n, t--) }, rate);
+            setTimeout(() => { this.updateClock(t--) }, rate);
         }
         else {
             this.config.complete();
             return;
         }
     }
-    startCountdown (n){
-        let t = n.dataset.counterStart || this.config.start;
-        this.updateClock(n, t)   
+    startCountdown (){
+        let t = this.element.dataset.counterStart || this.config.start;
+        this.config.delay = this.element.dataset.counterDelay ? this.element.dataset.counterDelay : this.config.delay;
+        if (this.config.delay !== false) { 
+            setTimeout(() => { this.updateClock(t) }, 5000);
+            return false;
+        }
+        else {
+            this.updateClock(t) 
+        }  
     }
     getDefaults() {
         return {
@@ -38,8 +47,10 @@ class CounterJS {
             repeat: 1,
             auto: true,
             start: 12,
+            delay: false,
             allowNegative: false,
-            complete: () => { console.log("Is complete"); }
+            complete: () => { console.log("Is complete"); },
+            start: () => { console.log("Is complete"); },
         }
     }
     getRemainingTime(end) {

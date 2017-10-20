@@ -104,8 +104,8 @@ var countdown = new CounterJS("#counter", {
             start: 12, // The start value
             delay: false, // Delay before execution
             allowNegative: false, // Allow the timer to utilise negative values
-            complete: () => { console.log("Is complete"); }, // Callback function when the process is complete
-            start: () => { console.log("Is complete"); }, // Callback function when the process starts
+            complete: function () { console.log("Is complete"); }, // Callback function when the process is complete
+            start: function () { console.log("Is complete"); }, // Callback function when the process starts
 });
             
  ```

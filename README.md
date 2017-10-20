@@ -51,6 +51,8 @@ The above example simply counts from 10, only after the delay period of 5 second
 
 ### The JavaScript Way 
 
+Simple and succinct just like the HTML method. 
+
 #### Basic Installation
 
 For this JavaScript installation, you will required a basic HTML tag with the ID you wish to transform into a counter element.
@@ -89,5 +91,22 @@ var countdown = new CounterJS("#counter", { rate: 10, start: 5000 });
 ```
 
 
-##
+## Configuration Options
+
+Below are the included defaults for this plugin.
+
+```javascript
+            rate: 1000, // Rate at which the counter operates        
+            repeat: 1,  // How many cycles the repeat
+            auto: true, // Automatically run
+            start: 12, // The start value
+            delay: false, // Delay before execution
+            allowNegative: false, // Allow the timer to utilise negative values
+            complete: () => { console.log("Is complete"); }, // Callback function when the process is complete
+            start: () => { console.log("Is complete"); }, // Callback function when the process starts
+            
+ ```
+
+
+
 

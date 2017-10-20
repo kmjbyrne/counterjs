@@ -45,7 +45,7 @@
     "build": "babel ./src --presets babel-preset-es2015 --out-dir ./dist --watch",
     "lint": "jshint ./src/ --reporter checkstyle > checkstyle.xml",
     "start": "npm run server",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vows --tests",
     "server": "webpack-dev-server --port 5000 --inline --progress --open"
   },
   "babel": {

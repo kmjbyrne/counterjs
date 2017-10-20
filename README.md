@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/kmjbyrne/counterjs.svg?branch=master)](https://travis-ci.org/kmjbyrne/counterjs)
+
 # CounterJS
 An extremely simple, super lightweight and no trills attached JavaScript plugin for handling countdowns or timer operations.
 

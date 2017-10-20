@@ -1,14 +1,21 @@
 # CounterJS
-An extremely simple, super lightweight and no trills JavaScript plugin for handling countdowns or timer operations. 
+An extremely simple, super lightweight and no trills attached JavaScript plugin for handling countdowns or timer operations.
 
 ## Use Cases
 1. Simplest of all - a basic counter that counts down from a given ceiling value.
 2. A series of counters in different locations on the page. 
 
+**There are two ways basic methods in which to use this plugin**. 
+
+1. HTML.
+2. JavaScript instantiation.
+
+_A little note: _
+
+_JQuery is super great at what it is does, a marvellous library and I do not knock it. However, not everyone wishes to use it. Due to this, the ability to use the plugin without jQuery is catered for! A library with zero dependencies is the simplest and most straightforward for just plug and play._
+
 
 ## How to get started
-
-There are two ways in which to use this plugin. JQuery is super great at what it is does but not everyone wishes to use it. Due to this, the ability to use the plugin without jQuery is catered for!
 
 ### The HTML Way 
 

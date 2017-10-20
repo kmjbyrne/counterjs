@@ -111,13 +111,6 @@ var countdown = new CounterJS("#counter", {
  ```
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
-
 <p data-counter-start="100000" data-counter-rate="1" data-counter-delay="5000"></p>
 <p data-counter-start="34" data-counter-rate="100"></p>
 <p data-counter-start="3"></p>
@@ -133,6 +126,5 @@ var countdown = new CounterJS("#counter", {
 <script type="text/javascript">
     var i = new CounterJS("#manual", { rate: 10, start: 5000 });
 </script>
-</body>
-</html>
+
 

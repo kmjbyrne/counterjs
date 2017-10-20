@@ -4,7 +4,11 @@ module.exports = function(config) {
       basePath: './tests',
       frameworks: ['jasmine'],
       // frameworks: ['karma-jasmine'],
-      // browsers: ['Chrome'],
+      browsers: ['Chrome'],
+      singleRun: true,
+      files: [
+          '*.js'
+      ]
       //...
     });
   };

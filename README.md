@@ -96,6 +96,8 @@ var countdown = new CounterJS("#counter", { rate: 10, start: 5000 });
 Below are the included defaults for this plugin.
 
 ```javascript
+
+var countdown = new CounterJS("#counter", { 
             rate: 1000, // Rate at which the counter operates        
             repeat: 1,  // How many cycles the repeat
             auto: true, // Automatically run
@@ -104,6 +106,7 @@ Below are the included defaults for this plugin.
             allowNegative: false, // Allow the timer to utilise negative values
             complete: () => { console.log("Is complete"); }, // Callback function when the process is complete
             start: () => { console.log("Is complete"); }, // Callback function when the process starts
+});
             
  ```
 

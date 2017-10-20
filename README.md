@@ -10,7 +10,7 @@ An extremely simple, super lightweight and no trills attached JavaScript plugin 
 1. HTML.
 2. JavaScript instantiation.
 
-_A little note: _
+A little note:
 
 _JQuery is super great at what it is does, a marvellous library and I do not knock it. However, not everyone wishes to use it. Due to this, the ability to use the plugin without jQuery is catered for! A library with zero dependencies is the simplest and most straightforward for just plug and play._
 

@@ -29,6 +29,9 @@
     "cash-cp": "^0.2.0",
     "cross-env": "^3.1.4",
     "jasmine": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.1.0",
     "release-script": "^1.0.2",
     "rollup": "^0.41.4",
     "rollup-plugin-babel": "^2.7.1",
@@ -45,7 +48,7 @@
     "build": "babel ./src --presets babel-preset-es2015 --out-dir ./dist --watch",
     "lint": "jshint ./src/ --reporter checkstyle > checkstyle.xml",
     "start": "npm run server",
-    "test": "vows --tests",
+    "test": "karma start",
     "server": "webpack-dev-server --port 5000 --inline --progress --open"
   },
   "babel": {
